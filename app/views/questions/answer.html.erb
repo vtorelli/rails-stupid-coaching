@@ -1,19 +1,25 @@
-<h1>Stupid Coaching</h1>
+<div class="container">
+  <h1>Stupid Coaching <br> Don't be lazy!</h1>
 
-<p>
-<% if @question.blank? %>
-no questions?
-<% else %>
-<%= @question %>
-<% end %>
-</p>
+  <div class="question-container">
+    <p>
+    <% if @question.blank? %>
+    * blank stare * <br>
+    * dreams about winning the lottery *
+    <% else %>
+    <%= @question %>
+    <% end %>
+    </p>
 
-<cite>- You</cite>
+    <em>- You</em>
+  </div>
 
-<p>
-<%= @answer %>
-</p>
+  <div class="answer-container">
+    <p> <%= @answer %> </p>
 
-<cite>- Your Coach</cite><br>
+    <em>- Your Coach</em><br>
+  </div>
 
-<p><%= link_to "ask a new question", ask_path %></p>
+  <p class="button"><%= link_to "ask a new question", ask_path %></p>
+
+</div>
